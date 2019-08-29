@@ -6,6 +6,14 @@ func main() {
 	jobs := make(chan int, 100)
 	results := make(chan int, 100)
 
+	type Vertex struct {
+	X int
+	Y int
+	}
+	
+	var test Vertex
+	
+	fmt.Println(test)
 	//Worker pools you can see the program utilize over 100% of cpu showing that milticore utilization
 	go worker(jobs, results)
 	go worker(jobs, results)
